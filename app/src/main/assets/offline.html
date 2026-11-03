@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+ html,body{margin:0;height:100%;background:#0e0e12;color:#f4f4f8;font-family:sans-serif}
+ .w{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 24px}
+ h1{font-size:2.2em;margin:0 0 12px} h1 b{color:#ff1111}
+ p{color:#b8b8c6;font-size:1.2em;margin:0 0 32px}
+ button{font-size:1.3em;padding:14px 40px;border-radius:10px;border:3px solid transparent;background:#ff1111;color:#fff}
+ button:focus{border-color:#fff;outline:none}
+</style></head>
+<body><div class="w">
+ <h1>F<b>TV</b></h1>
+ <p>No se pudo conectar. Revisa tu conexión a internet.</p>
+ <button id="r" autofocus>Reintentar</button>
+</div>
+<script>
+ var b=document.getElementById('r');
+ b.onclick=function(){ if(window.AndroidTV&&AndroidTV.retry) AndroidTV.retry(); };
+ b.focus();
+</script></body></html>
